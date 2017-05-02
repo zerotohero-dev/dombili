@@ -1,0 +1,9 @@
+{
+  "name": "dombili",
+  "version": "0.2.0",
+  "description": "Dombili knows your DOM.",
+  "main": "index.js",
+  "repository": "git@github.com:jsbites/dombili.git",
+  "author": "Volkan Özçelik <me@volkan.io> (https://volkan.io)",
+  "license": "MIT"
+}
