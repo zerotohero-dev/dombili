@@ -1,6 +1,6 @@
 {
   "name": "dombili",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Dombili knows your DOM.",
   "main": "index.js",
   "repository": "git@github.com:jsbites/dombili.git",

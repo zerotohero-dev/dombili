@@ -5,4 +5,4 @@ const scrollTop = window.pageYOffset ||
 
 const scrollToTop = () => window.scrollTo(0, 0);
 
-export { scrollToTop };
+export { scrollToTop, scrollTop };
