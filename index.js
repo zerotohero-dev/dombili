@@ -1,5 +1,5 @@
 
-const scrollTop = window.pageYOffset ||
+const scrollTop = () => window.pageYOffset ||
     ( document.documentElement && document.documentElement.scrollTop ) ||
     document.body.scrollTop;
 
