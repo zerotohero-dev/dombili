@@ -41,7 +41,7 @@ It is a compilation of short monthly screencasts about **JavaScript** and relate
 
 ## Tell Me More About `dombili`
 
-It all started by realizing bloated libraries can get when they have to support every arcane user agent that exists on the face of the earth.
+It all started by realizing how bloated libraries can get when they have to support every arcane user agent that exists on the face of the earth.
 
 The tendency to continue supporting old user agents has two consequences:
 
