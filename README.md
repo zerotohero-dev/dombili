@@ -14,7 +14,7 @@
 <center>
 `dombili` is a light, **zero-dependency** wrapper around modern browser APIs.
 <br>
-[He was also a **famous cat**, apparently][news].
+<a href="http://www.telegraph.co.uk/news/2016/11/10/outrage-after-istanbuls-iconic-celebrity-cat-statue-is-stolen/">He was also a **famous cat**, apparently</a>.
 </center>
 
 ```text
