@@ -1,8 +1,18 @@
+/*          |\__.__/|
+ *          )       (
+ *         =\       /=          .
+ *     |     )=====(       *          '
+ *    |     /       \             *        *
+ *   |     / dombili \       +                 '*
+ *  *      \        /
+ *  _/\_/\_/\_,  ,_/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
+ *            )  )   This project is a part of the
+ *           (  (   “Byte-Sized JavaScript” videocasts.
+ *           )  )  Watch “Byte-Sized JavaScript” at: https://bytesized.tv
+ *          (__(  MIT licensed — See LICENSE.md
+ *               Send your comments, suggestions, and feedback to me@volkan.io
+ */
 
-const scrollTop = () => window.pageYOffset ||
-    ( document.documentElement && document.documentElement.scrollTop ) ||
-    document.body.scrollTop;
+import * as dombili from './src';
 
-const scrollToTop = () => window.scrollTo(0, 0);
-
-export { scrollToTop, scrollTop };
+export default dombili;

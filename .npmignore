@@ -36,5 +36,9 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# Documentation (`npm run doc` will generate them instead)
-docs/**
+# To keep the npm package lean
+bin/**
+yarn.lock
+webpack.config.js
+conf.json
+.travis.yml

@@ -8,12 +8,12 @@
 #   |     / dombili \       +                 '*
 #  *      \        /
 #  _/\_/\_/\_,  ,_/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
-#            )  )   This project is a part of the 
+#            )  )   This project is a part of the
 #           (  (   “Byte-Sized JavaScript” videocasts.
 #           )  )  Watch “Byte-Sized JavaScript” at: https://bytesized.tv
 #          (__(  MIT licensed — See LICENSE.md
 #               Send your comments, suggestions, and feedback to me@volkan.io
 #
 
-eslint lib
+eslint src
 eslint index.js

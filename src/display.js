@@ -18,16 +18,14 @@ import { css } from './style';
 /**
  * Shows the element `el`.
  *
- * Compare this to the `$.show()` method of **jQuery**.
+ * > Compare this to the `$.show()` method of **jQuery**.
  *
  * @example
- *      import { show, selectFirst as find } from 'dombili';
+ * import { show, find } from 'dombili';
+ * const el = find( '#target' );
+ * show( el );
  *
- *      const el = find( '#target' );
- *
- *      show( el, 'inline' );
- *
- * @param {Element} el Reference to the `DOM` element to show.
+ * @param {Element} el Reference to the **DOM** element to show.
  * @param {string} [display='block'] The **CSS** `display` attribute to set.
  *      Defaults to `"block"`.
  *
@@ -43,16 +41,14 @@ const show = ( el, display = 'block' ) => {
 /**
  * Hides the element `el`.
  *
- * Compare this to the `$.hide()` method of **jQuery**.
+ * > Compare this to the `$.hide()` method of **jQuery**.
  *
  * @example
- *      import { hide, selectFirst as find } from 'dombili';
+ * import { hide, find } from 'dombili';
+ * const el = find( '#target' );
+ * hide( el );
  *
- *      const el = find( '#target' );
- *
- *      hide( el, 'inline' );
- *
- * @param {Element} el Reference to the `DOM` element to show.
+ * @param {Element} el Reference to the **DOM** element to show.
  * @param {string} [display='block'] The **CSS** `display` attribute to set.
  *      Defaults to `"block"`.
  *
@@ -68,16 +64,14 @@ const hide = ( el ) => {
 /**
  * Toggles the display of the element `el`.
  *
- * Compare this to the `$.toggle()` method of **jQuery**.
+ * > Compare this to the `$.toggle()` method of **jQuery**.
  *
  * @example
- *      import { toggle, selectFirst as find } from 'dombili';
+ * import { toggle, find } from 'dombili';
+ * const el = find( '#target' );
+ * toggle( el );
  *
- *      const el = find( '#target' );
- *
- *      toggle( el );
- *
- * @param {Element} el Reference to the `DOM` element to show.
+ * @param {Element} el Reference to the **DOM** element to show.
  * @param {string} [display='block'] The **CSS** `display` attribute to set
  *      when showing the element. Defaults to `"block"`.
  *

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #          |\__.__/|
 #          )       (
 #         =\       /=          .
@@ -13,6 +15,4 @@
 #               Send your comments, suggestions, and feedback to me@volkan.io
 #
 
-language: node_js
-node_js:
-  - "7.10.0"
+jsdoc -r -d docs -c conf.json -t ./node_modules/ink-docstrap/template -R README.md src 

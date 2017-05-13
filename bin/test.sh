@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #          |\__.__/|
 #          )       (
 #         =\       /=          .
@@ -6,13 +8,13 @@
 #   |     / dombili \       +                 '*
 #  *      \        /
 #  _/\_/\_/\_,  ,_/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
-#            )  )   This project is a part of the 
+#            )  )   This project is a part of the
 #           (  (   “Byte-Sized JavaScript” videocasts.
 #           )  )  Watch “Byte-Sized JavaScript” at: https://bytesized.tv
 #          (__(  MIT licensed — See LICENSE.md
 #               Send your comments, suggestions, and feedback to me@volkan.io
 #
 
-language: node_js
-node_js:
-  - "7.10.0"
+echo "The best test environment is production."
+
+exit 0
