@@ -37,7 +37,7 @@ It is a compilation of short monthly screencasts about **JavaScript** and relate
 >
 > Until it hits `version 1.0`, I’ll be liberally introducing breaking changes, please keep that in mind and **fix your versions in your package.json** or use a tool that does that for you (*[like `yarn`][yarn]*) if you depend on `dombili` in your apps.
 >
-> Once `badem` hits `version 1.0`, its API will stabilize, and the changes will be more backwards-compatible, as I will follow the [Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html) standards.
+> Once `dombili` hits `version 1.0`, its API will stabilize, and the changes will be more backwards-compatible, as I will follow the [Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html) standards.
 
 ## Tell Me More About `dombili`
 
