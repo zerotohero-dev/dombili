@@ -1,7 +1,7 @@
 {
   "name": "dombili",
   "version": "0.2.0",
-  "description": "Dombili knows your DOM.",
+  "description": "dombili is a light, zero-dependency wrapper around modern browser APIs.",
   "main": "index.js",
   "scripts": {
     "lint": "bin/lint.sh",
