@@ -38,3 +38,6 @@ jspm_packages
 
 # Documentation (`npm run doc` will generate them instead)
 docs/**
+
+# This is the only thing that I hate about Macs!
+.DS_Store
