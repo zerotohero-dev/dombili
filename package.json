@@ -1,6 +1,6 @@
 {
     "name": "dombili",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "description": "dombili is a light, zero-dependency wrapper around modern browser APIs.",
     "main": "index.js",
     "scripts": {

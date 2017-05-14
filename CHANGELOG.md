@@ -9,7 +9,7 @@
  _/\_/\_/\_,  ,_/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
 ```
 
-## **dombili** (*v.0.6.1*)
+## **dombili** (*v.0.6.2*)
 
 * Minor updates and bugfixes.
 * Minor fixes in documentation.
