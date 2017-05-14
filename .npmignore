@@ -41,3 +41,9 @@ docs/**
 
 # This is the only thing that I hate about Macs!
 .DS_Store
+
+# To keep the NPM package lean
+bin/**
+yarn.lock
+conf.json
+.travis.yml

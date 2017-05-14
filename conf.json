@@ -1,0 +1,17 @@
+{
+    "plugins": [ "plugins/markdown" ],
+    "templates": {
+        "systemName": "dombili",
+        "sort": false,
+        "theme": "cosmo",
+        "linenums": false,
+        "inverseNav": true,
+        "navType": "inline",
+        "syntaxTheme": "default",
+        "outputSourceFiles": true,
+        "search": false,
+        "includeDate": false,
+        "footer": "<style>hr {border-top: 2px #1a6ecc solid;margin-bottom: 8em;} .toc-h1, h1.page-title {display: none}; #toc .list-group .list-group-item:first-of-type {display: none;}body {font-size: 18px;} .sunlight-javascript, .sunlight-bash, .sunlight-plaintext {font-size: 16px; line-height: 1.5em;} .sunlight-highlight-text.sunlight-highlighted, .sunlight-highlight-bash.sunlight-highlighted, .sunlight-highlight-javascript.sunlight-highlighted {background:#FFEFB9;border: 1px #FFDE6A solid;} .sunlight-menu{display:none;} footer {margin-bottom: 3em;border-top: 0} footer span, footer span a, footer span a:hover {color:#cccccc !important}</style>",
+        "copyright": "<a href='https://volkan.io/'>© Volkan Özçelik</a><br><br>"
+    }
+}
