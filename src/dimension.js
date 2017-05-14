@@ -15,8 +15,11 @@
 
 import { scrollLeft, scrollTop } from './scroll';
 
-const nullRect = { width: 0, top: 0, left: 0, bottom: 0, height: 0 };
-const nullOffset = { left: 0, top: 0 };
+void scrollLeft;
+void scrollTop;
+
+const nullRect = { width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0 };
+const nullOffset = { left: 0, height: 0 };
 
 /**
  * Computes the bounding client rectangle of the `Element` `el`.
@@ -53,7 +56,7 @@ const rect = ( el ) => {
 const offset = ( el ) => {
     if ( !el ) { return nullOffset; }
 
-    return { left: el.offsetLeft || 0, top: el.offsetTop || 0 };
+    return { top: el.offsetTop || 0, left: el.offsetLeft || 0 };
 };
 
 /**

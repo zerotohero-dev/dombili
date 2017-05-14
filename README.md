@@ -78,7 +78,7 @@ For a typical [webpack][webpack] environment for instance, this will be similar 
 ```
 import * as dombili from 'dombili';
 
-// do stuff with dombili.;
+// Do stuff with dombili.
 ```
 
 Just consume `dombili` and let [`webpack`][webpack] take care of the bundling details for you.
@@ -109,7 +109,7 @@ You can also execute…
 npm run doc
 ```
 
-… after [forking dombili][fork], to generate the documentation locally.
+… after [**forking dombili**][fork], to generate the documentation locally.
 
 > If you feel like there is a missing example, [please file an issue][issue],<br>
 > or better **[fork dombili][fork]** and fix it.

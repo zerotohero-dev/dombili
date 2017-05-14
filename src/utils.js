@@ -14,6 +14,40 @@
  */
 
 /**
+ * Does nothing. — It is just a void function.
+ *
+ * @example
+ * import { noop } from 'dombili';
+ * // This does nothing:
+ * noop();
+ *
+ * @returns {undefined} Nothing.
+ */
+const noop = () => {};
+
+/**
+ * Returns `true` all the time.
+ *
+ * @example
+ * import { returnTrue } from 'dombili';
+ * console.log( returnTrue() );
+ *
+ * @returns {bool} `true`. — Always returns `true`.
+ */
+const returnTrue = () => true;
+
+/**
+ * Returns `false` all the time.
+ *
+ * @example
+ * import { returnFalse } from 'dombili';
+ * console.log( returnFalse() );
+ *
+ * @returns {bool} `false`. — Always returns `false`.
+ */
+const returnFalse = () => false;
+
+/**
  * Extends `dest` with the attributes of `src`,
  * by **shallowly** copying each attribute from `src` to `dest`.
  *
@@ -56,15 +90,15 @@ const extend = ( dest, src ) => {
  * console.log( inArray( urfa, collection ) );
  *
  * @param {any} needle The object to check against.
- * @param {Array} haystack The `Array` to search.
+ * @param {Array} hayStack The `Array` to search.
  *
  * @returns {bool} `true` if `haystack` contains the `needle`; `false` otherwise.
  */
-const inArray = ( needle, haystack ) => {
-    if ( !haystack ) { return false; }
-    if ( !haystack.indexOf ) { return false; }
+const inArray = ( needle, hayStack ) => {
+    if ( !hayStack ) { return false; }
+    if ( !hayStack.indexOf ) { return false; }
 
-    return haystack.indexOf( needle ) > -1;
+    return hayStack.indexOf( needle ) > -1;
 };
 
-export { extend, inArray };
+export { noop, returnTrue, returnFalse, extend, inArray };

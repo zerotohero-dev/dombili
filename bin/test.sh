@@ -15,6 +15,22 @@
 #               Send your comments, suggestions, and feedback to me@volkan.io
 #
 
-echo "The best test environment is production."
+npm run lint
+
+if [ $? != 0 ]; then
+    echo "Lints failed. — Exiting."
+
+    exit 1
+fi
+
+echo "The best testing environment is production."
+
+if [ $? != 0 ]; then
+    echo "Test failed. — Exiting."
+
+    exit 1
+fi
+
+echo "Everything is awesome!"
 
 exit 0

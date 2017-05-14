@@ -13,7 +13,7 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const noop = () => {};
+import { noop } from './utils';
 
 /**
  * Adds an event listener.
@@ -35,7 +35,7 @@ const on = ( el, eventType, onEvent = noop ) => {
     if ( !el ) { return; }
     if ( !el.addEventListener ) { return; }
 
-    el.addEventListener( eventType, onEvent, false );
+    el.addEventListener( el, `${eventType}`, onEvent, false );
 };
 
 /**
@@ -64,7 +64,7 @@ const off = ( el, eventType, onEvent = noop ) => {
     if ( !el ) { return; }
     if ( !el.removeEventListener ) { return; }
 
-    el.removeEventListener( eventType, onEvent );
+    el.removeEventListener( el, `${eventType}`, onEvent );
 };
 
 /**

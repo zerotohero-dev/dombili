@@ -13,7 +13,7 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const returnTrue = () => true;
+import { returnTrue } from './utils';
 
 /**
  * Finds the siblings of the given **DOM** `Element`, `el`.
@@ -44,10 +44,8 @@ const siblings = ( el, filter = returnTrue ) => {
     let nextSibling = el.parentNode.firstChild;
 
     while ( nextSibling ) {
-        if ( filter( nextSibling ) ) {
-            if ( nextSibling !== el ) {
-                peers.push( nextSibling );
-            }
+        if ( filter( nextSibling ) && nextSibling !== el ) {
+            peers.push( nextSibling );
         }
 
         nextSibling = nextSibling.nextSibling;

@@ -36,9 +36,14 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# To keep the npm package lean
+# Documentation (`npm run doc` will generate them instead)
+docs/**
+
+# This is the only thing that I hate about Macs!
+.DS_Store
+
+# To keep the NPM package lean
 bin/**
 yarn.lock
-webpack.config.js
 conf.json
 .travis.yml

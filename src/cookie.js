@@ -13,6 +13,8 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+const MILLISECONDS_IN_A_DAY = 24 * 60 * 60 * 1000;
+
 /**
  * Gets the value of the cookie with the given `name`.
  *
@@ -27,7 +29,7 @@
  * @returns {string} the value of the cookie.
  */
 const get = ( name ) => {
-    const matches = document.cookie.match( `(^|;) ?${name}=([^;]*)(;|$)` );
+    const matches = document.cookie.match( `(^|;) ?${encodeURIComponent( name )}=([^;]*)(;|$)` );
 
     return matches ? decodeURIComponent( matches[ 2 ] ) : null;
 };
@@ -50,7 +52,7 @@ const get = ( name ) => {
 const set = ( name, value, days = 0 ) => {
     const date = new Date();
 
-    date.setTime( date.getTime() + 24 * 60 * 60 * 1000 * days );
+    date.setTime( date.getTime() + MILLISECONDS_IN_A_DAY * days );
 
     const encodedName = encodeURIComponent( name );
     const encodedValue = encodeURIComponent( value );

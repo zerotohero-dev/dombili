@@ -25,10 +25,10 @@ import { on, off, ready } from './event';
 import { siblings, next, prev, nextAll, prevAll, first, last } from './family';
 import { script, style } from './lazy';
 import { get, post } from './network';
-import { select, find, selectFirst, matches, parent, closest } from './query';
+import { select, selectFirst, find, matches, parent, closest } from './query';
 import { scrollLeft, scrollTop, scrollToLeft, scrollToTop, scrollTo, scroll } from './scroll';
 import { css, setCss, hasClass, addClass, removeClass } from './style';
-import { extend, inArray } from './util';
+import { noop, returnTrue, returnFalse, extend, inArray } from './utils';
 
 const dombili = {
     wrap, unwrap,
@@ -38,13 +38,13 @@ const dombili = {
     rect, offset, relativeOffset,
     show, hide, toggle,
     on, off, ready,
-    siblings, next, prev, nextAll, prevAll, first, last,
     script, style,
     get, post,
-    select, find, selectFirst, matches, parent, closest,
+    siblings, next, prev, nextAll, prevAll, first, last,
+    select, selectFirst, find, matches, parent, closest,
     scrollLeft, scrollTop, scrollToLeft, scrollToTop, scrollTo, scroll,
     css, setCss, hasClass, addClass, removeClass,
-    extend, inArray
+    noop, returnTrue, returnFalse, extend, inArray
 };
 
 export default dombili;

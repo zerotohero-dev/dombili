@@ -13,12 +13,13 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-const fetch = window.fetch;
+import { extend } from './utils';
 
-import { extend } from './util';
+const fetch = window.fetch;
+const Promise = window.Promise;
 
 /**
- * Sends an **HTTP GET** request.
+ * Sends an `HTTP GET` request.
  *
  * This method uses `window.fetch` API in the background.
  *
@@ -34,14 +35,14 @@ import { extend } from './util';
  * @return {Promise} a `Promise` that resolves with a `Response` object.
  */
 const get = ( url, options = {} ) => {
-    if ( !fetch ) { return; }
-    if ( !Object.assign ) { return; }
+    if ( !Promise ) { throw new Error( 'Me wantz Promisez!' ); }
+    if ( !fetch ) { return Promise.reject( 'Unsupported user agent!' ); }
 
-    fetch( url, extend( { method: 'GET' }, options ) );
+    return fetch( url, extend( { method: 'GET' }, options ) );
 };
 
 /**
- * Sends an **HTTP POST** request.
+ * Sends an `HTTP POST` request.
  *
  * This method uses `window.fetch` API in the background.
  *
@@ -57,9 +58,10 @@ const get = ( url, options = {} ) => {
  * @return {Promise} a `Promise` that resolves with a `Response` object.
  */
 const post = ( url, options = {} ) => {
-    if ( !fetch ) { return; }
+    if ( !Promise ) { throw new Error( 'Me wantz Promisez!' ); }
+    if ( !fetch ) { return Promise.reject( 'Unsupported user agent!' ); }
 
-    fetch( url, extend( { method: 'POST' }, options ) );
+    return fetch( url, extend( { method: 'POST' }, options ) );
 };
 
 export { get, post };

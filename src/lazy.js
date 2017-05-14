@@ -13,6 +13,8 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+import { el, append } from './create';
+
 /**
  * Lazily injects a `<script>` element to the document.
  *
@@ -27,11 +29,11 @@
 const script = ( src ) => {
     if ( !src ) { return; }
 
-    const scr = document.createElement( 'script' );
+    const scr = el( 'script' );
 
     scr.src = `${src}`;
 
-    document.body.appendChild( scr );
+    append( scr, document.body );
 };
 
 /**
@@ -46,13 +48,15 @@ const script = ( src ) => {
  * @return {undefined} Nothing.
  */
 const style = ( src ) => {
-    const link = document.createElement( 'link' );
+    if ( !src ) { return; }
 
-    link.rel = 'stylesheet';
-    link.media = 'all';
+    const link = el( 'link' );
+
     link.href = `${src}`;
+    link.media = 'all';
+    link.rel = 'stylesheet';
 
-    document.getElementsByTagName( 'head' )[ 0 ].appendChild( link );
+    append( link, document.body );
 };
 
-export { style, script };
+export { script, style };

@@ -27,36 +27,57 @@
 const text = ( txt ) => document.createTextNode( `${txt}` );
 
 /**
- * If the `el` is a `string`, returns a **DOM** text node, otherwise returns `el` itself.
+ * If the `elm` is a `string`, returns a **DOM** text node, otherwise returns `elm` itself.
  *
  * @example
  * import { normalize } from 'dombili';
  * const textNode = normalize( 'I am a fat cat.' );
  *
- * @param {any} el the element to normalize.
+ * @param {any} elm the `Element` to normalize.
  *
  * @returns {Node} a **DOM** `Node`.
  */
-const normalize = ( el ) => typeof el === 'string' ? text( el ) : el;
+const normalize = ( elm ) => typeof elm === 'string' ? text( elm ) : elm;
+
+/**
+ * Updates the `innerHTML` of the `Element` `elm`.
+ *
+ * > Compare this to the `$.html()` method of **jQuery**.
+ *
+ * @example
+ * import { html, find } from 'dombili';
+ * const node = find( '#lahmacun' );
+ * html( node, '<h1>Yummy!</h1>' );
+ *
+ * @param {Element} elm The `Element` to change the `innerHTML` of.
+ * @param {string} innerHtml the `innerHTML` to set.
+ *
+ * @returns {undefined} Nothing.
+ */
+const html = ( elm, innerHtml ) => {
+    if ( !elm ) { return; }
+
+    elm.innerHTML = `${innerHtml}`;
+};
 
 /**
  * Creates an `Element`.
  *
  * @example
  * import { el } from 'dombili';
- * const el = el( 'div' );
+ * const elm = el( 'div' );
  *
  * @param {string} nodeName The node (*tag*) name.
- * @param {string} [html=''] (Optional) the `innerHTML` of the element.
+ * @param {string} [innerHtml=''] (Optional) the `innerHTML` of the element.
  * @returns {Element} the created element.
  */
-const el = ( nodeName, html = '' ) => {
+const el = ( nodeName, innerHtml = '' ) => {
     if ( !nodeName ) { return null; }
 
     const element = document.createElement( `${nodeName}` );
 
-    if ( html ) {
-        element.innerHTML = html;
+    if ( innerHtml ) {
+        html( element, innerHtml );
     }
 
     return element;
@@ -79,7 +100,6 @@ const el = ( nodeName, html = '' ) => {
  * @returns {undefined} Nothing.
  */
 const before = ( elm, ref ) => {
-    if ( !elm ) { return; }
     if ( !ref ) { return; }
     if ( !ref.parentNode ) { return; }
     if ( !ref.parentNode.insertBefore ) { return; }
@@ -104,7 +124,6 @@ const before = ( elm, ref ) => {
  * @returns {undefined} Nothing.
  */
 const after = ( elm, ref ) => {
-    if ( !elm ) { return; }
     if ( !ref ) { return; }
     if ( !ref.parentNode ) { return; }
     if ( !ref.parentNode.insertBefore ) { return; }
@@ -129,7 +148,6 @@ const after = ( elm, ref ) => {
  * @returns {undefined} Nothing.
  */
 const append = ( elm, ref ) => {
-    if ( !elm ) { return; }
     if ( !ref ) { return; }
     if ( !ref.appendChild ) { return; }
 
@@ -153,11 +171,10 @@ const append = ( elm, ref ) => {
  * @returns {undefined} Nothing.
  */
 const prepend = ( elm, ref ) => {
-    if ( !elm ) { return; }
     if ( !ref ) { return; }
     if ( !ref.appendChild ) { return; }
 
-    before( normalize( elm ), ref.firstChild );
+    before( elm, ref.firstChild );
 };
 
 /**
@@ -177,10 +194,7 @@ const prepend = ( elm, ref ) => {
  * @returns {undefined} Nothing.
  */
 const replace = ( elm, ref ) => {
-    if ( !elm ) { return; }
-    if ( !ref ) { return; }
-
-    const parent = elm.parentNode || ref.parentNode || null;
+    const parent = ( elm && elm.parentNode ) || ( ref && ref.parentNode ) || null;
 
     if ( !parent ) { return; }
 
@@ -209,28 +223,6 @@ const remove = ( elm ) => {
 };
 
 /**
- * Updates the `innerHTML` of the `Element` `elm`.
- *
- * > Compare this to the `$.html()` method of **jQuery**.
- *
- * @example
- * import { html, find } from 'dombili';
- * const node = find( '#lahmacun' );
- * html( node, '<h1>Yummy!</h1>' );
- *
- * @param {Element} elm The `Element` to change the `innerHTML` of.
- * @param {string} innerHtml the `innerHTML` to set.
- *
- * @returns {undefined} Nothing.
- */
-const html = ( elm, innerHtml ) => {
-    if ( !elm ) { return; }
-    if ( typeof elm.innerHTML === 'undefined' ) { return; }
-
-    elm.innerHTML = `${innerHtml}`;
-};
-
-/**
  * Sets the attributed of an `Element` `elm`.
  *
  * > Compare this to the `$.attr()` method of **jQuery**.
@@ -249,7 +241,7 @@ const html = ( elm, innerHtml ) => {
 const setAttr = ( elm, attribute, value ) => {
     if ( !elm ) { return; }
 
-    elm[ attribute ] = value;
+    elm[ `${attribute}` ] = `${value}`;
 };
 
 /**
@@ -270,7 +262,7 @@ const setAttr = ( elm, attribute, value ) => {
 const attr = ( elm, attribute ) => {
     if ( !elm ) { return null; }
 
-    return elm[ attribute ];
+    return elm[ `${attribute}` ];
 };
 
 /**
@@ -289,11 +281,7 @@ const attr = ( elm, attribute ) => {
  *
  * @returns {undefined} Nothing.
  */
-const setData = ( elm, attribute, value ) => {
-    if ( !elm ) { return; }
-
-    elm[ `data-${attribute}` ] = value;
-};
+const setData = ( elm, attribute, value ) => setAttr( elm, `data-${attribute}`, value );
 
 /**
  * Gets the value of the data attribute associated with the `Element` `elm`.
@@ -310,11 +298,7 @@ const setData = ( elm, attribute, value ) => {
  *
  * @returns {string} The value of the attribute.
  */
-const data = ( elm, attribute ) => {
-    if ( !elm ) { return null; }
-
-    return elm[ `data-${attribute}` ];
-};
+const data = ( elm, attribute ) => attr( elm, `data-${attribute}` );
 
 export {
     text, normalize, el, before, after, append, prepend, replace,

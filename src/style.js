@@ -31,9 +31,10 @@
 const setCss = ( el, style ) => {
     if ( !el ) { return; }
     if ( typeof style !== 'object' ) { return; }
+    if ( !el.style ) { return; }
 
     for ( const prop in style ) {
-        el.style[prop] = style[prop];
+        el.style[ prop ] = style[ prop ];
     }
 };
 
@@ -56,11 +57,14 @@ const setCss = ( el, style ) => {
  */
 const css = ( el, prop, computed = false ) => {
     if ( !el ) { return ''; }
-    if ( typeof prop !== 'string' ) { return ''; }
+    if ( !el.style ) { return ''; }
+    if ( !prop ) { return ''; }
+    if ( !window.getComputedStyle && computed ) { return ''; }
 
     return computed ?
-        window.getComputedStyle( el, null )[ prop ] :
-        el.style[ prop ];
+        window.getComputedStyle( el, null )[ `${prop}` ] :
+        el.style[ `${prop}` ];
+
 };
 
 /**
@@ -78,13 +82,19 @@ const css = ( el, prop, computed = false ) => {
  */
 const hasClass = ( el, className ) => {
     if ( !el ) { return false; }
+    if ( !className ) { return false; }
     if ( !el.classList ) { return false; }
 
-    return el.classList.contains( className );
+    return el.classList.contains( `${className}` );
 };
 
 /**
  * Adds a **CSS** class to the `Element` `el`.
+ *
+ * @example
+ * import { addClass, find } from 'dombili';
+ * const node = find( '#lahmacun' );
+ * addClass( node, 'yummy' );
  *
  * @param {Element} el The element to add a **CSS** class to.
  * @param {string} className The **CSS** class to add.
@@ -93,9 +103,10 @@ const hasClass = ( el, className ) => {
  */
 const addClass = ( el, className ) => {
     if ( !el ) { return; }
+    if ( !className ) { return; }
     if ( !el.classList ) { return; }
 
-    el.classList.add( className );
+    el.classList.add( `${className}` );
 };
 
 /**
@@ -113,9 +124,10 @@ const addClass = ( el, className ) => {
  */
 const removeClass = ( el, className ) => {
     if ( !el ) { return; }
+    if ( !className ) { return; }
     if ( !el.classList ) { return; }
 
-    el.classList.remove( className );
+    el.classList.remove( `${className}` );
 };
 
 export { css, setCss, hasClass, addClass, removeClass };

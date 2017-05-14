@@ -33,7 +33,7 @@ import { css } from './style';
  */
 const show = ( el, display = 'block' ) => {
     if ( !el ) { return; }
-    if ( !el.style || !el.style.display ) { return; }
+    if ( !el.style || typeof el.style.display === 'undefined' ) { return; }
 
     el.style.display = display || 'block';
 };
@@ -56,7 +56,7 @@ const show = ( el, display = 'block' ) => {
  */
 const hide = ( el ) => {
     if ( !el ) { return; }
-    if ( !el.style || !el.style.display ) { return; }
+    if ( !el.style || typeof el.style.display === 'undefined' ) { return; }
 
     el.style.display = 'none';
 };
@@ -78,6 +78,9 @@ const hide = ( el ) => {
  * @returns {undefined} Nothing.
  */
 const toggle = ( el, display = 'block' ) => {
+    if ( !el ) { return; }
+    if ( !el.style || typeof el.style.display === 'undefined' ) { return; }
+
     const displayStyle = css( el, 'display', true );
 
     if ( displayStyle === 'none' ) {

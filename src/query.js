@@ -14,20 +14,20 @@
  */
 
 /**
- * Finds all the `Element`s that match a given selector.
+ * Finds the first `Element` that matches a given selector.
  *
  * @example
- * import { select } from 'dombili';
- * const nodes = select( '#todos li' );
+ * import { selectFirst } from 'dombili';
+ * const node = selectFirst( '#todos li' );
  *
  * @param {string} selector The **CSS** selector to select the nodes.
  *
- * @returns {NodeList} A live `NodeList`; an empty `NodeList` if no match.
+ * @returns {Node} A `Node` that matches; `null` if no match.
  */
 const select = ( selector ) => {
     if ( !document.querySelectorAll ) { return null; }
 
-    return document.querySelectorAll( selector );
+    return document.querySelectorAll( `${selector}` );
 };
 
 /**
@@ -44,13 +44,13 @@ const select = ( selector ) => {
 const selectFirst = ( selector ) => {
     if ( !document.querySelector ) { return null; }
 
-    return document.querySelector( selector );
+    return document.querySelector( `${selector}` );
 };
 
 /**
  * Finds the first `Element` that matches a given selector.
  *
- * This method is an alias to `selectFirst`.
+ * > This method is an **alias** to `selectFirst`.
  *
  * @method find
  *
@@ -80,10 +80,10 @@ const find = selectFirst;
  * @returns {bool} `true` if it’s a match; `false` otherwise.
  */
 const matches = ( el, selector ) => {
-    if ( !el ) { return null; }
-    if ( !el.matches ) { return null; }
+    if ( !el ) { return false; }
+    if ( !el.matches ) { return false; }
 
-    return el.matches( selector );
+    return el.matches( `${selector}` );
 };
 
 /**
@@ -125,8 +125,8 @@ const parent = ( el ) => {
  */
 const closest = ( el, selector ) => {
     if ( !el ) { return null; }
+    if ( !selector ) { return el.parentNode ? el.parentNode : null; }
     if ( !el.closest ) { return null; }
-    if ( !selector ) { return null; }
 
     return el.closest( `${selector}` );
 };
