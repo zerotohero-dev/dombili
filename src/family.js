@@ -55,6 +55,44 @@ const siblings = ( el, filter = returnTrue ) => {
 };
 
 /**
+ * Finds the parents of the given **DOM** `Element`, `el`.
+ *
+ * > If `filter` is passed as an argument, this function returns the
+ * > nodes only if `filter` returns `true` for that node.
+ *
+ * > Compare this to the `$.parents()` method of **jQuery**.
+ *
+ * @example
+ * import { parents, find } from 'dombili';
+ * const node = find( '#todo-list' );
+ * const parents = parents( node );
+ *
+ * @param {Element} el The DOM element to find the siblings of.
+ * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ *      If not given, defaults to a function that returns true.
+ *
+ * @returns {Element[]} An `array` of matched DOM `Element`s.
+ */
+const parents = ( el, filter = returnTrue ) => {
+    if ( !el ) { return []; }
+    if ( !el.parentNode ) { return []; }
+
+    const ancestors = [];
+
+    let parent = el.parentNode;
+
+    while ( parent ) {
+        if ( filter( parent ) ) {
+            ancestors.push( parent );
+        }
+
+        parent = parent.parentNode;
+    }
+
+    return ancestors;
+};
+
+/**
  * Finds the next siblings of the given DOM `Element`, `el`.
  *
  * > If `filter` is passed as an argument, this function returns the
@@ -234,4 +272,4 @@ const last = ( el, filter = returnTrue ) => {
     return filter( el.lastChild ) ? el.lastChild : null;
 };
 
-export { siblings, next, prev, nextAll, prevAll, first, last };
+export { siblings, parents, next, prev, nextAll, prevAll, first, last };

@@ -48,7 +48,6 @@ const rect = ( el ) => {
  * import { offset, find } from 'dombili';
  * const elOffset = offset( find( '#draggable' ) );
  *
- *
  * @param {Element} el The `Element` to compute the offset of.
  *
  * @returns {object} An `object` with the shape `{ left, top }`.

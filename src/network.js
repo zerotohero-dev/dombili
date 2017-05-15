@@ -42,6 +42,23 @@ const get = ( url, options = {} ) => {
 };
 
 /**
+ * Sends an `HTTP GET` request, and resolves with a **JSON** `object` as a response.
+ *
+ * This method uses `window.fetch` API in the background.
+ *
+ * @example
+ * import { json } from 'dombili';
+ * json( 'https://httpbin.org/ip' )
+ *     .then( ( data ) => console.log( data.ip ) );
+ *
+ * @param {string} url The **URL** to request.
+ * @param {object} [options={}] Optional options to pass to `window.fetch`.
+ *
+ * @return {Promise} a `Promise` that resolves with a `Response` object.
+ */
+const json = ( url, options = {} ) => get( url, options ).then( ( res ) => res.json() );
+
+/**
  * Sends an `HTTP POST` request.
  *
  * This method uses `window.fetch` API in the background.
@@ -64,4 +81,4 @@ const post = ( url, options = {} ) => {
     return fetch( url, extend( { method: 'POST' }, options ) );
 };
 
-export { get, post };
+export { get, post, json };
