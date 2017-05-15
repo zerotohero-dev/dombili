@@ -133,7 +133,7 @@ npm run doc
 <p>&nbsp;</p>
 
 > If you feel like there is a missing example, [please file an issue][issue],<br>
-> or better **[fork dombili][fork]** and fix it.
+> or better, **[fork dombili][fork]** and fix it.
 
 ## Dependencies
 
