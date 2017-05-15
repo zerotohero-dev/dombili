@@ -33,7 +33,7 @@ const scrollLeft = () => window.pageXOffset || document.documentElement.scrollLe
  *
  * @return {number} The top scroll offset of the window.
  */
-const scrollTop = () => window.pageyYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+const scrollTop = () => window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
 /**
  * Scrolls the window to the given left offsett.

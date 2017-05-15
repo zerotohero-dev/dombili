@@ -12,9 +12,9 @@
 ```
 
 <center>
-`dombili` is a light, **zero-dependency** wrapper around modern browser APIs.
+<code>dombili</code> is a light, <strong>zero-dependency</strong> wrapper around modern browser APIs.
 <br>
-<a href="http://www.telegraph.co.uk/news/2016/11/10/outrage-after-istanbuls-iconic-celebrity-cat-statue-is-stolen/">He was also a **famous cat**, apparently</a>.
+<a href="http://www.telegraph.co.uk/news/2016/11/10/outrage-after-istanbuls-iconic-celebrity-cat-statue-is-stolen/">He was also a <strong>famous cat</strong>, apparently</a>.
 </center>
 
 ```text

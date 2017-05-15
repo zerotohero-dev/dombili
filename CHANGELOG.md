@@ -14,7 +14,7 @@
 * Added a `parent()` method to get the parent elements of a node.
 * Added a `json()` method that assumes a **JSON** response from an **AJAX** request by default.
 
-## **dombili** (*v0.6.1*)
+## **dombili** (*v0.6.3*)
 
 * Minor updates and bugfixes.
 * Minor fixes in documentation.
