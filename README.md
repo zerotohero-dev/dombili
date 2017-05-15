@@ -99,9 +99,28 @@ yarn add dombili
 
 ## Documentation and Examples
 
-Visit [https://bytesized.tv/dombili/global.html][docs] for the recent documentation.
+Here’s a quick sneak peek of how `dombili` looks like:
 
-The documentation also contains inline examples.
+```javascript
+import { json, find, el, after } from 'dombili';
+
+const url = 'https://some.website/api/v1/data';
+
+// Do an AJAX request and assume a JSON response:
+json( url ).then( ( res ) => {
+    const meaning = find( '#meaning-of-life' );
+    const fortyTwo = el( 'p', res.html );
+
+    // Adds `fortyTwo` after `meaning`:
+    after( fortyTwo, meaning );
+} );
+```
+
+> Visit…
+>
+> [https://bytesized.tv/dombili/global.html][docs]
+>
+> …for further examples and documentation.
 
 You can also execute…
 
@@ -110,6 +129,8 @@ npm run doc
 ```
 
 … after [**forking dombili**][fork], to generate the documentation locally.
+
+<p>&nbsp;</p>
 
 > If you feel like there is a missing example, [please file an issue][issue],<br>
 > or better **[fork dombili][fork]** and fix it.
