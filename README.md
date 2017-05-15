@@ -71,7 +71,7 @@ moves the needled an inch forward, so to speak.
 
 > No reason to add an extra build step when browsers support **EcmaScript modules**.
 
-That said, there’s nothing preventing you from configuring your bundler of choice to consume `dombili` as an “*EcmaScript module*” and produce backwards-compatible flavor of code you need.
+That said, there’s nothing preventing you from configuring your bundler of choice to consume `dombili` as an “*EcmaScript module*” and produce a backwards-compatible flavor of code you need.
 
 For a typical [webpack][webpack] environment for instance, this will be similar to:
 
