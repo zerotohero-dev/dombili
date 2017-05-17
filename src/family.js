@@ -24,8 +24,8 @@ import { returnTrue } from './utils';
  * > Compare this to the `$.siblings()` method of **jQuery**.
  *
  * @example
- * import { siblings, find } from 'dombili';
- * const node = find( '#todo-list li' );
+ * import { siblings, $ } from 'dombili';
+ * const node = $( '#todo-list li' );
  * const otherTodos = siblings( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
@@ -63,8 +63,8 @@ const siblings = ( el, filter = returnTrue ) => {
  * > Compare this to the `$.parents()` method of **jQuery**.
  *
  * @example
- * import { parents, find } from 'dombili';
- * const node = find( '#todo-list' );
+ * import { parents, $ } from 'dombili';
+ * const node = $( '#todo-list' );
  * const parents = parents( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
@@ -101,8 +101,8 @@ const parents = ( el, filter = returnTrue ) => {
  * > Compare this to the `$.nextAll()` method of **jQuery**.
  *
  * @example
- * import { nextAll, find } from 'dombili';
- * const node = find( '#todo-list li' );
+ * import { nextAll, $ } from 'dombili';
+ * const node = $( '#todo-list li' );
  * const otherTodos = nextAll( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
@@ -139,8 +139,8 @@ const nextAll = ( el, filter = returnTrue ) => {
  * > Compare this to the `$.prevAll()` method of **jQuery**.
  *
  * @example
- * import { prevAll, find } from 'dombili';
- * const node = find( '#todo-list li' );
+ * import { prevAll, $ } from 'dombili';
+ * const node = $( '#todo-list li' );
  * const otherTodos = prevAll( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
@@ -177,8 +177,8 @@ const prevAll = ( el, filter = returnTrue ) => {
  * > Compare this to the `$.next()` method of **jQuery**.
  *
  * @example
- * import { next, find } from 'dombili';
- * const node = find( '#todo-list li' );
+ * import { next, $ } from 'dombili';
+ * const node = $( '#todo-list li' );
  * const nextTodo = next( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
@@ -203,8 +203,8 @@ const next = ( el, filter = returnTrue ) => {
  * > Compare this to the `$.next()` method of **jQuery**.
  *
  * @example
- * import { next, find } from 'dombili';
- * const node = find( '#todo-list li' );
+ * import { next, $ } from 'dombili';
+ * const node = $( '#todo-list li' );
  * const nextTodo = next( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
@@ -229,8 +229,8 @@ const prev = ( el, filter = returnTrue ) => {
  * > Compare this to the `$.first()` method of **jQuery**.
  *
  * @example
- * import { first, find } from 'dombili';
- * const node = find( '#todo-list li' );
+ * import { first, $ } from 'dombili';
+ * const node = $( '#todo-list li' );
  * const firstTodo = first( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
@@ -255,8 +255,8 @@ const first = ( el, filter = returnTrue ) => {
  * > Compare this to the `$.last()` method of **jQuery**.
  *
  * @example
- * import { last, find } from 'dombili';
- * const node = find( '#todo-list li' );
+ * import { last, $ } from 'dombili';
+ * const node = $( '#todo-list li' );
  * const lastTodo = last( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.

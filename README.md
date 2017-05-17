@@ -83,6 +83,31 @@ import * as dombili from 'dombili';
 
 Just consume `dombili` and let [`webpack`][webpack] take care of the bundling details for you.
 
+> **Webpack-specific Note**
+>
+> You will also need to tell [`webpack`][webpack] to add `dombili` to the bundle.
+>
+> Here’s one way of doing it:
+>
+> ```
+> …
+>     module: {
+>         rules: [ {
+>             test: /\.js$/,
+>             include: [
+>
+>                 // Assuming `src` has your source files:
+>                 join( __dirname, 'src' ),
+>
+>                 // Include `dombili` to the bundle too:
+>                 join( __dirname, 'node_modules/dombili' )
+>             ],
+>             use: [ 'babel-loader' ]
+>         } ]
+>     },
+> …
+> ```
+
 ## Installation
 
 Installing via [npm][npm]:
@@ -102,13 +127,13 @@ yarn add dombili
 Here’s a quick sneak peek of how `dombili` looks like:
 
 ```javascript
-import { json, find, el, after } from 'dombili';
+import { json, $, el, after } from 'dombili';
 
 const url = 'https://some.website/api/v1/data';
 
 // Do an AJAX request and assume a JSON response:
 json( url ).then( ( res ) => {
-    const meaning = find( '#meaning-of-life' );
+    const meaning = $( '#meaning-of-life' );
     const fortyTwo = el( 'p', res.html );
 
     // Adds `fortyTwo` after `meaning`:

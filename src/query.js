@@ -65,11 +65,28 @@ const selectFirst = ( selector ) => {
 const find = selectFirst;
 
 /**
+ * Finds the first `Element` that matches a given selector.
+ *
+ * > This method is an **alias** to `selectFirst`.
+ *
+ * @method $
+ *
+ * @example
+ * import { $ } from 'dombili';
+ * const node = $( '#todos li' );
+ *
+ * @param {string} selector The **CSS** selector to select the nodes.
+ *
+ * @returns {Node} A `Node` that matches; `null` if no match.
+ */
+const $ = selectFirst;
+
+/**
  * A predicate function that returns `true` if the `Element` `el` matches the `selector`.
  *
  * @example
- * import { matches, find } from 'dombili';
- * const node = find( '#todos li' );
+ * import { matches, $ } from 'dombili';
+ * const node = $( '#todos li' );
  * if ( matches( node, '#todos li' ) ) {
  *     console.log( 'The node matches the selector.' );
  * }
@@ -92,8 +109,8 @@ const matches = ( el, selector ) => {
  * > Compare this to the `$.parent()` method of **jQuery**.
  *
  * @example
- * import { parent, find } from 'dombili';
- * const luke = find( '#the-force-is-strong-with-this-one' );
+ * import { parent, $ } from 'dombili';
+ * const luke = $( '#the-force-is-strong-with-this-one' );
  * const vader = parent( luke );
  *
  * @param {Element} el The element to get the parent node off.
@@ -113,8 +130,8 @@ const parent = ( el ) => {
  * > Compare this to the `$.closest()` method of **jQuery**.
  *
  * @example
- * import { closest, find } from 'dombili';
- * const node = find( '#todos' );
+ * import { closest, $ } from 'dombili';
+ * const node = $( '#todos' );
  * const top = closest( node, '.container' );
  *
  * @param {Element} el The element to start search.
@@ -131,4 +148,4 @@ const closest = ( el, selector ) => {
     return el.closest( `${selector}` );
 };
 
-export { select, selectFirst, find, matches, parent, closest };
+export { select, selectFirst, find, $, matches, parent, closest };

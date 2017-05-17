@@ -21,8 +21,8 @@ import { noop } from './utils';
  * > Compare this to the `$.on()` method of **jQuery**.
  *
  * @example
- * import { on, find } from 'dombili';
- * const list = find( '#todo-list' );
+ * import { on, $ } from 'dombili';
+ * const list = $( '#todo-list' );
  * on( list, 'click', ( evt ) => console.log( evt.target.nodeName ) );
  *
  * @param {Element} el The element to bind and event to.
@@ -44,8 +44,8 @@ const on = ( el, eventType, onEvent = noop ) => {
  * > Compare this to the `$.off()` method of **jQuery**.
  *
  * @example
- * import { on, off, find } from 'dombili';
- * const list = find( '#todo-list' );
+ * import { on, off, $ } from 'dombili';
+ * const list = $( '#todo-list' );
  * // A constant reference to the actual event listener:
  * const onListClick = ( evt ) => console.log( evt.target.nodeName );
  * // Attaches the event listener:

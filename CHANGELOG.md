@@ -9,6 +9,13 @@
  _/\_/\_/\_,  ,_/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
 ```
 
+## **dombili** (*v0.8.0*)
+
+* Default export was not working, fixed it.
+* Added `webpack`-specific instructions to the **README**.
+* Added `$` as an **alias** to `find`.
+* Updated documentation
+
 ## **dombili** (*v0.7.0*)
 
 * Added a `parent()` method to get the parent elements of a node.

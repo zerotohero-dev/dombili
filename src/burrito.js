@@ -19,9 +19,9 @@
  * > Compare this to the `$.wrap()` method of **jQuery**.
  *
  * @example
- * import { wrap, find } from 'dombili';
- * const beans = find( '#beans' );
- * const pita = find( '#pita' );
+ * import { wrap, $ } from 'dombili';
+ * const beans = $( '#beans' );
+ * const pita = $( '#pita' );
  * wrap( beans, pita );
  *
  * @param {Element} el The element that will be wrapped.
@@ -45,8 +45,8 @@ const wrap = ( el, wrapper ) => {
  * > Compare this to the `$.unwrap()` method of **jQuery**.
  *
  * @example
- * import { unwrap, find } from 'dombili';
- * const el = find( '#target' );
+ * import { unwrap, $ } from 'dombili';
+ * const el = $( '#target' );
  * unrwap( el );
  *
  * @param {Element} el The element to unwrap.

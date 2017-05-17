@@ -13,6 +13,4 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import * as dombili from './src';
-
-export default dombili;
+module.exports = require( './src' );

@@ -19,8 +19,8 @@
  * > Compare this to the `$.css()` method of **jQuery**.
  *
  * @example
- * import { setCss, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { setCss, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * setCss( node, { color: '#160024' } );
  *
  * @param {Element} el The element to set the styles of.
@@ -44,8 +44,8 @@ const setCss = ( el, style ) => {
  * > Compare this to the `$.css()` method of **jQuery**.
  *
  * @example
- * import { css, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { css, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * console.log( css( node, 'color' ) );
  *
  * @param {Element} el The element to get the style of.
@@ -71,8 +71,8 @@ const css = ( el, prop, computed = false ) => {
  * Checks if the `Element` `el` has a **CSS** class associated with it.
  *
  * @example
- * import { hasClass, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { hasClass, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * console.log( hasClass( node, 'yummy' ) );
  *
  * @param {Element} el The element to check.
@@ -92,8 +92,8 @@ const hasClass = ( el, className ) => {
  * Adds a **CSS** class to the `Element` `el`.
  *
  * @example
- * import { addClass, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { addClass, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * addClass( node, 'yummy' );
  *
  * @param {Element} el The element to add a **CSS** class to.
@@ -113,8 +113,8 @@ const addClass = ( el, className ) => {
  * Removes a **CSS** class from the `Element` `el`.
  *
  * @example
- * import { removeClass, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { removeClass, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * removeClass( node, 'yummy' );
  *
  * @param {Element} el The element to remove a **CSS** class from.
