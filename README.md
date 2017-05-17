@@ -89,8 +89,14 @@ Just consume `dombili` and let [`webpack`][webpack] take care of the bundling de
 >
 > Here’s one way of doing it:
 >
-> ```
-> …
+> ```javascript
+> // webpack.config.js
+>
+> const { join } = require( 'fs' );
+>
+> module.exports = {
+>     …
+>
 >     module: {
 >         rules: [ {
 >             test: /\.js$/,
@@ -105,7 +111,9 @@ Just consume `dombili` and let [`webpack`][webpack] take care of the bundling de
 >             use: [ 'babel-loader' ]
 >         } ]
 >     },
-> …
+>
+>     …
+> };
 > ```
 
 ## Installation
