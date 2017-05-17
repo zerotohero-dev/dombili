@@ -21,8 +21,8 @@ import { css } from './style';
  * > Compare this to the `$.show()` method of **jQuery**.
  *
  * @example
- * import { show, find } from 'dombili';
- * const el = find( '#target' );
+ * import { show, $ } from 'dombili';
+ * const el = $( '#target' );
  * show( el );
  *
  * @param {Element} el Reference to the **DOM** element to show.
@@ -44,8 +44,8 @@ const show = ( el, display = 'block' ) => {
  * > Compare this to the `$.hide()` method of **jQuery**.
  *
  * @example
- * import { hide, find } from 'dombili';
- * const el = find( '#target' );
+ * import { hide, $ } from 'dombili';
+ * const el = $( '#target' );
  * hide( el );
  *
  * @param {Element} el Reference to the **DOM** element to show.
@@ -67,8 +67,8 @@ const hide = ( el ) => {
  * > Compare this to the `$.toggle()` method of **jQuery**.
  *
  * @example
- * import { toggle, find } from 'dombili';
- * const el = find( '#target' );
+ * import { toggle, $ } from 'dombili';
+ * const el = $( '#target' );
  * toggle( el );
  *
  * @param {Element} el Reference to the **DOM** element to show.

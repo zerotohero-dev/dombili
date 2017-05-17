@@ -45,8 +45,8 @@ const normalize = ( elm ) => typeof elm === 'string' ? text( elm ) : elm;
  * > Compare this to the `$.html()` method of **jQuery**.
  *
  * @example
- * import { html, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { html, find as $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * html( node, '<h1>Yummy!</h1>' );
  *
  * @param {Element} elm The `Element` to change the `innerHTML` of.
@@ -89,9 +89,9 @@ const el = ( nodeName, innerHtml = '' ) => {
  * > Compare this to the `$.before()` method of **jQuery**.
  *
  * @example
- * import { el, before, find } from 'dombili';
+ * import { el, before, find as $ } from 'dombili';
  * const elm = el( 'li', 'Remember the milk.' );
- * const ref = find( '#todo-list li:first-child' );
+ * const ref = $( '#todo-list li:first-child' );
  * before( el, ref );
  *
  * @param {Element} elm The `Element` to insert before.
@@ -113,9 +113,9 @@ const before = ( elm, ref ) => {
  * > Compare this to the `$.after()` method of **jQuery**.
  *
  * @example
- * import { el, after, find } from 'dombili';
+ * import { el, after, find as $ } from 'dombili';
  * const elm = el( 'li', 'Remember the milk.' );
- * const ref = find( '#todo-list li:last-child' );
+ * const ref = $( '#todo-list li:last-child' );
  * after( el, ref );
  *
  * @param {Element} elm The `Element` to insert before.
@@ -137,9 +137,9 @@ const after = ( elm, ref ) => {
  * > Compare this to the `$.append()` method of **jQuery**.
  *
  * @example
- * import { el, append, find } from 'dombili';
+ * import { el, append, $ } from 'dombili';
  * const elm = el( 'li', 'Remember the milk.' );
- * const ref = find( '#todo-list' );
+ * const ref = $( '#todo-list' );
  * append( el, ref );
  *
  * @param {Element} elm The `Element` to insert before.
@@ -160,9 +160,9 @@ const append = ( elm, ref ) => {
  * > Compare this to the `$.prepend()` method of **jQuery**.
  *
  * @example
- * import { el, prepend, find } from 'dombili';
+ * import { el, prepend, $ } from 'dombili';
  * const elm = el( 'li', 'Remember the milk.' );
- * const ref = find( '#todo-list' );
+ * const ref = $( '#todo-list' );
  * prepend( el, ref );
  *
  * @param {Element} elm The `Element` to insert before.
@@ -183,9 +183,9 @@ const prepend = ( elm, ref ) => {
  * > Compare this to the `$.replaceWith()` method of **jQuery**.
  *
  * @example
- * import { el, replace, find } from 'dombili';
+ * import { el, replace, $ } from 'dombili';
  * const elm = el( 'li', 'Remember the milk.' );
- * const ref = find( '#todo-list li:last-child' );
+ * const ref = $( '#todo-list li:last-child' );
  * replace( el, ref );
  *
  * @param {Element} elm The `Element` to insert before.
@@ -207,8 +207,8 @@ const replace = ( elm, ref ) => {
  * > Compare this to the `$.remove()` method of **jQuery**.
  *
  * @example
- * import { remove, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { remove, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * remove( lahmacun );
  *
  * @param {Elm} elm The element to remove.
@@ -228,8 +228,8 @@ const remove = ( elm ) => {
  * > Compare this to the `$.attr()` method of **jQuery**.
  *
  * @example
- * import { setAttr, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { setAttr, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * setAttr( node, 'yummy', 'very' );
  *
  * @param {Element} elm The element to udpate the attribute of.
@@ -250,8 +250,8 @@ const setAttr = ( elm, attribute, value ) => {
  * > Compare this to the `$.attr()` method of **jQuery**.
  *
  * @example
- * import { attr, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { attr, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * console.log( attr( node, 'yummy' ) );
  *
  * @param {Element} elm The `Element` to check.
@@ -271,8 +271,8 @@ const attr = ( elm, attribute ) => {
  * > Compare this to the `$.data()` method of **jQuery**.
  *
  * @example
- * import { setData, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { setData, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * setData( node, 'yummy', 'very' );
  *
  * @param {Element} elm The element to udpate the attribute of.
@@ -289,8 +289,8 @@ const setData = ( elm, attribute, value ) => setAttr( elm, `data-${attribute}`, 
  * > Compare this to the `$.data()` method of **jQuery**.
  *
  * @example
- * import { data, find } from 'dombili';
- * const node = find( '#lahmacun' );
+ * import { data, $ } from 'dombili';
+ * const node = $( '#lahmacun' );
  * console.log( data( node, 'yummy' ) );
  *
  * @param {Element} elm The `Element` to check.

@@ -80,8 +80,8 @@ const scrollTo = ( left = 0, top = 0 ) => window.scrollTo( left, top );
  * If `el` is not found, scrolls the `window` instead.
  *
  * @example
- * import { scrollTo, find } from 'dombili';
- * scroll( find( '#container' ), 100, 100 );
+ * import { scrollTo, $ } from 'dombili';
+ * scroll( $( '#container' ), 100, 100 );
  *
  * @param {any} [el=window] The `Element` to adjust the scroll of.
  * @param {number} [left=0] The left scroll position to set in pixels. Defaults to `0`.

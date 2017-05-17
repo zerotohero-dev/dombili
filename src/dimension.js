@@ -18,15 +18,15 @@ import { scrollLeft, scrollTop } from './scroll';
 void scrollLeft;
 void scrollTop;
 
-const nullRect = { width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0 };
-const nullOffset = { left: 0, height: 0 };
+const nullRect = Object.freeze( { width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0 } );
+const nullOffset = Object.freeze( { left: 0, height: 0 } );
 
 /**
  * Computes the bounding client rectangle of the `Element` `el`.
  *
  * @example
- * import { rect, find } from 'dombili';
- * const elRect = rect( find( '#draggable' ) );
+ * import { rect, $ } from 'dombili';
+ * const elRect = rect( $( '#draggable' ) );
  *
  * @param {Element} el The `Element` to compute the bounding client rectangle of.
  *
@@ -45,8 +45,8 @@ const rect = ( el ) => {
  * > Compare this to the `$.offset()` method of **jQuery**.
  *
  * @example
- * import { offset, find } from 'dombili';
- * const elOffset = offset( find( '#draggable' ) );
+ * import { offset, $ } from 'dombili';
+ * const elOffset = offset( $( '#draggable' ) );
  *
  * @param {Element} el The `Element` to compute the offset of.
  *
@@ -64,8 +64,8 @@ const offset = ( el ) => {
  * > Compare this to the `$.offset()` method of **jQuery**.
  *
  * @example
- * import { relativeOffset, find } from 'dombili';
- * const elOffset = relativeOffset( find( '#draggable' ) );
+ * import { relativeOffset, $ } from 'dombili';
+ * const elOffset = relativeOffset( $( '#draggable' ) );
  *
  * @param {Element} el The `Element` to compute the offset of.
  *
