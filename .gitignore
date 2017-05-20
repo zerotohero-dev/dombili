@@ -41,3 +41,6 @@ docs/**
 
 # This is the only thing that I hate about Macs!
 .DS_Store
+
+# IDE-specific
+.c9
