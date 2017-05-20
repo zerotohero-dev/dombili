@@ -47,3 +47,6 @@ bin/**
 yarn.lock
 conf.json
 .travis.yml
+
+# IDE-specific
+.c9
