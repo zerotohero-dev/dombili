@@ -35,7 +35,7 @@ const on = ( el, eventType, onEvent = noop ) => {
     if ( !el ) { return; }
     if ( !el.addEventListener ) { return; }
 
-    el.addEventListener( el, `${eventType}`, onEvent, false );
+    el.addEventListener( `${eventType}`, onEvent, false );
 };
 
 /**
@@ -64,7 +64,7 @@ const off = ( el, eventType, onEvent = noop ) => {
     if ( !el ) { return; }
     if ( !el.removeEventListener ) { return; }
 
-    el.removeEventListener( el, `${eventType}`, onEvent );
+    el.removeEventListener( `${eventType}`, onEvent );
 };
 
 /**
