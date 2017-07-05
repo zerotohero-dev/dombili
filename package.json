@@ -33,7 +33,12 @@
         "vidcast",
         "videocast",
         "dombili",
-        "screencast"
+        "screencast",
+        "podcast",
+        "screencast",
+        "bytesized.tv",
+        "byte-sized javascript",
+        "byte-sized"        
     ],
     "bugs": {
       "url": "https://github.com/jsbites/dombili/issues"
