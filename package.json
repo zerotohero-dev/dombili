@@ -19,5 +19,24 @@
         "eslint-plugin-babel": "^4.1.1",
         "ink-docstrap": "^1.3.0",
         "jsdoc": "^3.4.3"
-    }
+    },
+    "keywords": [
+        "dom",
+        "javascript",
+        "dom manipulation",
+        "forward compatible",
+        "jquery",
+        "modern",
+        "lightweight",
+        "cat",
+        "lightweight",
+        "vidcast",
+        "videocast",
+        "dombili",
+        "screencast"
+    ],
+    "bugs": {
+      "url": "https://github.com/jsbites/dombili/issues"
+    },
+    "homepage": "https://bytesized.tv/dombili/"    
 }
