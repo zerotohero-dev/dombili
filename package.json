@@ -1,6 +1,6 @@
 {
     "name": "dombili",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "description": "dombili is a light, zero-dependency wrapper around modern browser APIs.",
     "main": "index.js",
     "scripts": {
@@ -21,24 +21,24 @@
         "jsdoc": "^3.4.3"
     },
     "keywords": [
-        "dom",
-        "javascript",
-        "dom manipulation",
-        "forward compatible",
-        "jquery",
-        "modern",
-        "lightweight",
+        "byte-sized javascript",
+        "byte-sized",
+        "bytesized.tv",
         "cat",
-        "lightweight",
-        "vidcast",
-        "videocast",
+        "dom manipulation",
+        "dom",
         "dombili",
-        "screencast",
+        "forward compatible",
+        "javascript",
+        "jquery",
+        "lightweight",
+        "modern",
+        "podcast",
         "podcast",
         "screencast",
-        "bytesized.tv",
-        "byte-sized javascript",
-        "byte-sized"        
+        "screencast",
+        "vidcast",
+        "videocast"
     ],
     "bugs": {
       "url": "https://github.com/jsbites/dombili/issues"
