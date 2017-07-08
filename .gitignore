@@ -44,3 +44,6 @@ docs/**
 
 # IDE-specific
 .c9
+.history
+.idea
+.vscode
