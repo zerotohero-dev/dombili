@@ -13,7 +13,7 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { noop } from './utils';
+import { noop } from './util';
 
 /**
  * Adds an event listener.

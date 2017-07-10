@@ -13,7 +13,7 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { returnTrue } from './utils';
+import { returnTrue } from './util';
 
 /**
  * Finds the siblings of the given **DOM** `Element`, `el`.

@@ -13,7 +13,7 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
-import { extend } from './utils';
+import { extend } from './util';
 
 const fetch = window.fetch;
 const Promise = window.Promise;
