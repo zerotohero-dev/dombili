@@ -8,6 +8,10 @@
  *      \        /
  _/\_/\_/\_,  ,_/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
 ```
+## **dombili** (*v0.9.0*)
+
+* Added a few extra methods for traversing parent nodes of an element.
+* Documentation updates.
 
 ## **dombili** (*v0.8.0*)
 

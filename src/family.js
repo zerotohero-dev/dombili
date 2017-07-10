@@ -65,13 +65,17 @@ const siblings = ( el, filter = returnTrue ) => {
  * @example
  * import { parents, $ } from 'dombili';
  * const node = $( '#todo-list' );
- * const parents = parents( node );
+ * const targets = parents( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
  * @param {any} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element[]} An `array` of matched DOM `Element`s.
+ *
+ * @see parentsIncludingSelf
+ * @see firstParent
+ * @see firstparentIncludingSelf
  */
 const parents = ( el, filter = returnTrue ) => {
     if ( !el ) { return []; }
@@ -90,6 +94,102 @@ const parents = ( el, filter = returnTrue ) => {
     }
 
     return ancestors;
+};
+
+/**
+ * Finds the parents of the given **DOM** `Element`, `el`. Starts the search
+ * from the current element; that is, the current element will be in the returned
+ * `array` too.
+ *
+ * > If `filter` is passed as an argument, this function returns the
+ * > nodes only if `filter` returns `true` for that node.
+ *
+ * > Compare this to the `$.parents()` method of **jQuery**.
+ *
+ * @example
+ * import { parentsIncludingSelf as parents, $ } from 'dombili';
+ * const node = $( '#todo-list' );
+ * const targets = parents( node );
+ *
+ * @param {Element} el The DOM element to find the siblings of.
+ * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ *      If not given, defaults to a function that returns true.
+ *
+ * @returns {Element[]} An `array` of matched DOM `Element`s.
+ *
+ * @see parents
+ * @see firstParent
+ * @see firstParentIncludingSelf
+ */
+const parentsIncludingSelf = ( el, filter = returnTrue ) => {
+    if ( !el ) { return []; }
+    if ( !el.parentNode ) { return [ el ]; }
+
+    return [ el, ...parents( el, filter ) ];
+};
+
+/**
+ * Finds the first parent of the given **DOM** `Element`, `el`.
+ *
+ * > If `filter` is passed as an argument, this function returns the
+ * > nodes only if `filter` returns `true` for that node.
+ *
+ * > Compare this to the `$.parents()` method of **jQuery**.
+ *
+ * @example
+ * import { firstParent as parent, $ } from 'dombili';
+ * const node = $( '#todo-list' );
+ * const target = parent( node );
+ *
+ * @param {Element} el The DOM element to find the siblings of.
+ * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ *      If not given, defaults to a function that returns true.
+ *
+ * @returns {Element} The first `Element` that matches the filter.
+ *
+ * @see parents
+ * @see parentsIncludingSelf
+ * @see firstParentIncludingSelf
+ */
+const firstParent = ( el, filter = returnTrue ) => {
+    const ancestors = parents( el, filter );
+
+    if ( ancestors && ancestors.length ) { return ancestors[ 0 ]; }
+
+    return null;
+};
+
+/**
+ * Finds the first parent of the given **DOM** `Element`, `el`. Starts the search
+ * from the current element; that is, the current element will be return if it matches
+ * the filter; otherwise the search proceeds from its parents.
+ *
+ * > If `filter` is passed as an argument, this function returns the
+ * > nodes only if `filter` returns `true` for that node.
+ *
+ * > Compare this to the `$.parents()` method of **jQuery**.
+ *
+ * @example
+ * import { firstParentIncludingSelf as parent, $ } from 'dombili';
+ * const node = $( '#todo-list' );
+ * const target = parent( node );
+ *
+ * @param {Element} el The DOM element to find the siblings of.
+ * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ *      If not given, defaults to a function that returns true.
+ *
+ * @returns {Element} The first `Element` that matches the filter.
+ *
+ * @see parents
+ * @see parentsIncludingSelf
+ * @see firstParent
+ */
+const firstParentIncludingSelf = ( el, filter = returnTrue ) => {
+    const ancestors = parentsIncludingSelf( el, filter );
+
+    if ( ancestors && ancestors.length ) { return ancestors[ 0 ]; }
+
+    return null;
 };
 
 /**
@@ -272,4 +372,16 @@ const last = ( el, filter = returnTrue ) => {
     return filter( el.lastChild ) ? el.lastChild : null;
 };
 
-export { siblings, parents, next, prev, nextAll, prevAll, first, last };
+export {
+    first,
+    firstParent,
+    firstParentIncludingSelf,
+    last,
+    next,
+    nextAll,
+    parents,
+    parentsIncludingSelf,
+    prev,
+    prevAll,
+    siblings
+};
