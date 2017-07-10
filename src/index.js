@@ -22,7 +22,12 @@ import {
 import { rect, offset, relativeOffset } from './dimension';
 import { show, hide, toggle } from './display';
 import { on, off, ready } from './event';
-import { siblings, parents, next, prev, nextAll, prevAll, first, last } from './family';
+import {
+    first, firstParent, firstParentIncludingSelf,
+    last, next, nextAll, parents,
+    parentsIncludingSelf,
+    prev, prevAll, siblings
+} from './family';
 import { script, style } from './lazy';
 import { get, post, json } from './network';
 import { select, selectFirst, find, $, matches, parent, closest } from './query';
@@ -40,7 +45,10 @@ export {
     on, off, ready,
     script, style,
     get, post, json,
-    siblings, parents, next, prev, nextAll, prevAll, first, last,
+    first, firstParent, firstParentIncludingSelf,
+    last, next, nextAll, parents,
+    parentsIncludingSelf,
+    prev, prevAll, siblings,
     select, selectFirst, find, $, matches, parent, closest,
     scrollLeft, scrollTop, scrollToLeft, scrollToTop, scrollTo, scroll,
     css, setCss, hasClass, addClass, removeClass,

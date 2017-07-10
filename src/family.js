@@ -125,7 +125,10 @@ const parentsIncludingSelf = ( el, filter = returnTrue ) => {
     if ( !el ) { return []; }
     if ( !el.parentNode ) { return [ el ]; }
 
-    return [ el, ...parents( el, filter ) ];
+    const filteredEl = filter( el );
+    const ancestors = parents( el, filter );
+
+    return filteredEl ? [ el, ...ancestors ] : ancestors;
 };
 
 /**
