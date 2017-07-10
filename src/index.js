@@ -33,7 +33,8 @@ import { get, post, json } from './network';
 import { select, selectFirst, find, $, matches, parent, closest } from './query';
 import { scrollLeft, scrollTop, scrollToLeft, scrollToTop, scrollTo, scroll } from './scroll';
 import { css, setCss, hasClass, addClass, removeClass } from './style';
-import { noop, returnTrue, returnFalse, extend, inArray } from './utils';
+import { tick, untick } from './timer';
+import { noop, returnTrue, returnFalse, extend, inArray } from './util';
 
 export {
     wrap, unwrap,
@@ -52,5 +53,6 @@ export {
     select, selectFirst, find, $, matches, parent, closest,
     scrollLeft, scrollTop, scrollToLeft, scrollToTop, scrollTo, scroll,
     css, setCss, hasClass, addClass, removeClass,
+    tick, untick,
     noop, returnTrue, returnFalse, extend, inArray
 };
