@@ -25,12 +25,6 @@
              Send your comments, suggestions, and feedback to me@volkan.io
 ```
 
-## Byte-Sized What?!
-
-[Byte-Sized JavaScript][vidcast].
-
-It is a compilation of short monthly screencasts about **JavaScript** and related technologies.
-
 ## Alpha-Stage Software Warning
 
 > `dombili` is in its early stages; so anything in its implementation can change.
