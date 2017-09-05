@@ -13,6 +13,9 @@
  *               Send your comments, suggestions, and feedback to me@volkan.io
  */
 
+
+import { $ } from './query';
+
 /**
  * Wraps the element `el` into the wrapping element `wrapper`.
  *
@@ -30,6 +33,12 @@
  * @returns {undefined} Nothing.
  */
 const wrap = ( el, wrapper ) => {
+    if ( typeof el === 'string' ) {
+        wrap( $( el ), wrapper );
+
+        return;
+    }
+
     if ( !el ) { return; }
     if ( !wrapper ) { return; }
     if ( !el.parentNode ) { return; }
@@ -54,6 +63,12 @@ const wrap = ( el, wrapper ) => {
  * @returns {undefined} Nothing.
  */
 const unwrap = ( el ) => {
+    if ( typeof el === 'string' ) {
+        unwrap( $( el ) );
+
+        return;
+    }
+
     if ( !el ) { return; }
 
     const parent = el.parentNode;

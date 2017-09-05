@@ -26,6 +26,7 @@
  */
 const select = ( selector ) => {
     if ( !document.querySelectorAll ) { return null; }
+    if ( typeof selector !== 'string' ) { return selector; }
 
     return document.querySelectorAll( `${selector}` );
 };
@@ -43,6 +44,7 @@ const select = ( selector ) => {
  */
 const selectFirst = ( selector ) => {
     if ( !document.querySelector ) { return null; }
+    if ( typeof selector !== 'string' ) { return selector; }
 
     return document.querySelector( `${selector}` );
 };
@@ -97,6 +99,10 @@ const $ = selectFirst;
  * @returns {bool} `true` if it’s a match; `false` otherwise.
  */
 const matches = ( el, selector ) => {
+    if ( typeof el === 'string' ) {
+        return matches( $( el ), selector );
+    }
+
     if ( !el ) { return false; }
     if ( !el.matches ) { return false; }
 
@@ -118,6 +124,10 @@ const matches = ( el, selector ) => {
  * @returns {Element} the parent `Element` if exists; `null` otherwise.
  */
 const parent = ( el ) => {
+    if ( typeof el === 'string' ) {
+        return parent( $( el ) );
+    }
+
     if ( !el ) { return null; }
     if ( !el.parentNode ) { return null; }
 
@@ -141,6 +151,10 @@ const parent = ( el ) => {
  *      `null` otherwise.
  */
 const closest = ( el, selector ) => {
+    if ( typeof el === 'string' ) {
+        return closest( $( el ) );
+    }
+
     if ( !el ) { return null; }
     if ( !selector ) { return el.parentNode ? el.parentNode : null; }
     if ( !el.closest ) { return null; }
