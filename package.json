@@ -1,6 +1,6 @@
 {
     "name": "dombili",
-    "version": "0.10.2",
+    "version": "0.11.0",
     "description": "dombili is a light, zero-dependency wrapper around modern browser APIs.",
     "main": "index.js",
     "scripts": {
@@ -14,11 +14,11 @@
     "dependencies": {},
     "devDependencies": {
         "babel-eslint": "^7.2.3",
-        "eslint": "^4.1.1",
-        "eslint-config-jsbites": "^0.8.0",
-        "eslint-plugin-babel": "^4.1.1",
+        "eslint": "^4.6.1",
+        "eslint-config-jsbites": "^0.9.0",
+        "eslint-plugin-babel": "^4.1.2",
         "ink-docstrap": "^1.3.0",
-        "jsdoc": "^3.4.3"
+        "jsdoc": "^3.5.4"
     },
     "keywords": [
         "byte-sized javascript",

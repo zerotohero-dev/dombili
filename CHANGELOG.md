@@ -9,6 +9,12 @@
  _/\_/\_/\_,  ,_/_/\_/\_/\_/\_/\_/\_/\_/\_/\_
 ```
 
+## **dombili** (*v0.11.0*)
+
+* Documentation updates.
+* Dependency updates.
+* Added a `range` module for text selections.
+
 ## **dombili** (*v0.10.0*)
 
 * Added animation frame helpers.
@@ -32,7 +38,7 @@
 
 ## **dombili** (*v0.6.3*)
 
-* Minor updates and bugfixes.
+* Minor updates and bug fixes.
 * Minor fixes in documentation.
 * A few additional methods.
 * Bumped version number (*a lot*) to sync with `npm`.

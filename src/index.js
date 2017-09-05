@@ -31,6 +31,7 @@ import {
 import { script, style } from './lazy';
 import { get, post, json } from './network';
 import { select, selectFirst, find, $, matches, parent, closest } from './query';
+import { selectedText } from './range';
 import { scrollLeft, scrollTop, scrollToLeft, scrollToTop, scrollTo, scroll } from './scroll';
 import { css, setCss, hasClass, addClass, removeClass } from './style';
 import { tick, untick } from './timer';
@@ -51,6 +52,7 @@ export {
     parentsIncludingSelf,
     prev, prevAll, siblings,
     select, selectFirst, find, $, matches, parent, closest,
+    selectedText,
     scrollLeft, scrollTop, scrollToLeft, scrollToTop, scrollTo, scroll,
     css, setCss, hasClass, addClass, removeClass,
     tick, untick,

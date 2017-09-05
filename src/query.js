@@ -84,7 +84,8 @@ const find = selectFirst;
 const $ = selectFirst;
 
 /**
- * A predicate function that returns `true` if the `Element` `el` matches the `selector`.
+ * A predicate function that returns `true` if the `Element` `el`
+ * matches the `selector`.
  *
  * @example
  * import { matches, $ } from 'dombili';
