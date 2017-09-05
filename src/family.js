@@ -29,7 +29,7 @@ import { returnTrue } from './util';
  * const otherTodos = siblings( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element[]} An `array` of matched DOM `Element`s.
@@ -68,7 +68,7 @@ const siblings = ( el, filter = returnTrue ) => {
  * const targets = parents( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element[]} An `array` of matched DOM `Element`s.
@@ -112,7 +112,7 @@ const parents = ( el, filter = returnTrue ) => {
  * const targets = parents( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element[]} An `array` of matched DOM `Element`s.
@@ -145,7 +145,7 @@ const parentsIncludingSelf = ( el, filter = returnTrue ) => {
  * const target = parent( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element} The first `Element` that matches the filter.
@@ -178,7 +178,7 @@ const firstParent = ( el, filter = returnTrue ) => {
  * const target = parent( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element} The first `Element` that matches the filter.
@@ -209,7 +209,7 @@ const firstParentIncludingSelf = ( el, filter = returnTrue ) => {
  * const otherTodos = nextAll( node );
  *
  * @param {Element} el The DOM element to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element[]} An `array` of matched DOM `Element`s.
@@ -247,7 +247,7 @@ const nextAll = ( el, filter = returnTrue ) => {
  * const otherTodos = prevAll( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the nodes.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element[]} An `array` of matched DOM `Element`s.
@@ -285,7 +285,7 @@ const prevAll = ( el, filter = returnTrue ) => {
  * const nextTodo = next( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the node.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element} The found `Element` if it exists; `null` otherwise.
@@ -311,7 +311,7 @@ const next = ( el, filter = returnTrue ) => {
  * const nextTodo = next( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the node.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element} The found `Element` if it exists; `null` otherwise.
@@ -337,7 +337,7 @@ const prev = ( el, filter = returnTrue ) => {
  * const firstTodo = first( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the node.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element} The found `Element` if it exists; `null` otherwise.
@@ -363,7 +363,7 @@ const first = ( el, filter = returnTrue ) => {
  * const lastTodo = last( node );
  *
  * @param {Element} el The **DOM** `Element` to find the siblings of.
- * @param {any} [filter=returnTrue] A predicate to filter the node.
+ * @param {function(*)} [filter=returnTrue] A predicate to filter the nodes.
  *      If not given, defaults to a function that returns true.
  *
  * @returns {Element} The found `Element` if it exists; `null` otherwise.
