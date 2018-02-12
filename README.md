@@ -1,3 +1,17 @@
+[![tests][tests]][tests-url]
+[![deploy][deploy]][deploy-url]
+[![npm][npm]][npm-url]
+[![license][license]][license-url]
+
+[tests]: https://img.shields.io/travis/jsbites/dombili.svg
+[tests-url]: https://travis-ci.org/jsbites/dombili
+[npm-url]: https://www.npmjs.com/packages/dombili
+[npm]: https://img.shields.io/npm/v/dombili.svg
+[deploy]: https://img.shields.io/github/last-commit/jsbites/dombili.svg?label=last%20deployed
+[deploy-url]: https://github.com/jsbites/dombili/
+[license]: https://img.shields.io/npm/l/dombili.svg
+[license-url]: https://www.npmjs.com/package/dombili
+
 ## About `dombili`
 
 ```text
